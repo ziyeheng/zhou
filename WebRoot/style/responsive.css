@@ -1,0 +1,64 @@
+﻿
+/*----平板样式---*/
+ @media (min-width: 768px) and (max-width: 979px) {
+ }
+ 
+ /*----电脑窄屏---*/
+ @media (min-width:980px) {
+.container {
+	width: 970px
+}
+}
+
+ /*----电脑宽屏---*/
+ @media (min-width:1200px) {
+.container {
+	width: 1170px
+}
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.main em { width: 30px;}
+	.box01 .left { width: 60%;}
+	.main { font-size: 13px;}
+	.page_cont h2 {font-size: 16px;}
+	.main h3 { font-size: 14px;}
+	.input_select select  { font-size: 13px;}
+	.main .input_text { font-size: 13px;}
+	.main .submit_box input { font-size: 13px;}
+	.main em { height: 24px; line-height: 24px;}
+	.input_box { width: 80%;}
+	.box01 .left { width: 100%;}
+	.box01 .right { margin-bottom: 20px;}
+	.main .submit_box input { width: 150px; height: 40px;}
+	.main h4 i { width: 75%; margin-top: 8px;}
+}
+
+/*---手机样式----*/
+@media screen and (max-width: 480px) {
+    html {
+        -webkit-text-size-adjust: none;
+    }
+	
+	.header h1 { width: 70%;}
+	.header .home { width: 10%}
+	.main { font-size: 13px; padding: 0 10px;}
+	.page_cont h2 {font-size: 16px;}
+	.main h3 { font-size: 14px;}
+	.main .field { margin-bottom: 10px;}
+	.input_select select  { font-size: 13px;}
+	.main .input_text { font-size: 13px;}
+	.main .input_sex { height: 28px; line-height: 28px;}
+	.main .submit_box input { font-size: 13px;}
+	.main em { height: 24px; line-height: 24px; width: 20px;}
+	.input_box { width: 88%;}
+	.box01 .left { width: 70%;}
+	.box01 .right { margin: 0; float: right; width: 80px; height: 90px;}
+	.box01 .right .photo { height: 90px;}
+	.main .submit_box input { width: 100px; height: 38px; margin: 0 10px;}
+	.main h4 i { width: 70%; margin-top: 8px;}
+	.main .input_sex input { margin-right: 30px;}
+	.input_select select { width: 32%; margin-bottom: 10px;}
+	.main .submit_box { padding: 10px 0;}
+}

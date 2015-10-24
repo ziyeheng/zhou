@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 开发模式下使用,这样可以打印出更详细的错误信息 <constant name="struts.devMode" value="false" 
+		/> -->
+	<!-- 指定每次请求到达，重新加载资源文件 -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<constant name="struts.i18n.reload" value="true" />
+	<constant name="struts.multipart.maxSize" value="1048576000" />
+
+	<package name="package" extends="struts-default" namespace="/">
+		<action name="index*" method="{1}" class="com.zhoubian.action.adminAction">
+			<result name="l">bg/login.jsp</result>
+			<result name="u">bg/members.jsp</result>
+			<result name="d">bg/membersdelete.jsp</result>
+			<result name="au">bg/admins.jsp</result>
+			<result name="up">bg/UpPassword.jsp</result>
+			<result name="ada">/bg/addadmin.jsp</result>
+			<result name="upa">/bg/updamin.jsp</result>
+			<result name="upm">/bg/upmember.jsp</result>
+		</action>
+
+		<action name="re*" method="{1}"
+			class="com.zhoubian.action.members_rechargeAction">
+			<result name="red">bg/redmoney.jsp</result>
+			<result name="re">bg/recharge.jsp</result>
+			<result name="cou">bg/useconpon.jsp</result>
+			<result name="cou2">bg/useconpon2.jsp</result>
+		</action>
+
+		<action name="yj*" method="{1}" class="com.zhoubian.action.yongjinAction">
+			<result name="yj">bg/yongjin.jsp</result>
+			<result name="uyj">bg/upyongjin.jsp</result>
+		</action>
+		<action name="c*" method="{1}" class="com.zhoubian.action.categoryAction">
+			<result name="c">bg/main_menu.jsp</result>
+			<result name="ac">/bg/addmodulcategory.jsp</result>
+			<result name="uc">/bg/upmodulcategory.jsp</result>
+			<result name="addc">/bg/addmaincat.jsp</result>
+			<result name="upc">/bg/upmaincat.jsp</result>
+		</action>
+		<action name="mc*" method="{1}"
+			class="com.zhoubian.action.modulcategoryAction">
+			<result name="mc">bg/modulcategory.jsp</result>
+			<result name="fmc">bg/firstmodulcategory.jsp</result>
+			<result name="smc">bg/secondmodulcategory.jsp</result>
+			<result name="fc">/bg/addFirstCategory.jsp</result>
+			<result name="sc">/bg/addSecondCategory.jsp</result>
+			<result name="ufc">/bg/upFirstCategory.jsp</result>
+			<result name="usc">/bg/upSecondCategory.jsp</result>
+		</action>
+		<action name="r*" method="{1}" class="com.zhoubian.action.roleAction">
+			<result name="r">bg/role.jsp</result>
+			<result name="ar">/bg/addrole.jsp</result>
+			<result name="ur">/bg/uprole.jsp</result>
+			<result name="max">/bg/maxnum.jsp</result>
+		</action>
+		<action name="pa*" method="{1}"
+			class="com.zhoubian.action.platformactivityAction">
+			<result name="pa">bg/platformactivity.jsp</result>
+			<result name="h">/bg/helpinfo.jsp</result>
+			<result name="apla">/bg/addplatformactivity.jsp</result>
+			<result name="adh">/bg/addhelp.jsp</result>
+			<result name="upla">/bg/upplatformactivity.jsp</result>
+			<result name="uph">/bg/uphelp.jsp</result>
+		</action>
+		<action name="ni*" method="{1}"
+			class="com.zhoubian.action.newinformationAction">
+			<result name="ni">bg/newinformation.jsp</result>
+		</action>
+		<action name="myj*" method="{1}"
+			class="com.zhoubian.action.memberyongjinAction">
+			<result name="myj">bg/memberyongjin.jsp</result>
+		</action>
+		<action name="mi*" method="{1}"
+			class="com.zhoubian.action.memberinformationAction">
+			<result name="mi">bg/memberinformation.jsp</result>
+		</action>
+	</package>
+</struts>
